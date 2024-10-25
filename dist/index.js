@@ -13,7 +13,7 @@ const port = process.env.PORT || 3001;
 app.use((0, cors_1.default)());
 // Endpoint to serve JSON data
 app.get('/api/data', (req, res) => {
-    const dataPath = path_1.default.resolve(__dirname, 'db.json');
+    const dataPath = path_1.default.resolve(__dirname, '../public/db.json');
     fs_1.default.readFile(dataPath, 'utf-8', (err, data) => {
         if (err) {
             console.error('Error reading JSON file:', err);

@@ -19,7 +19,7 @@ app.use(cors());
 
 // Endpoint to serve JSON data
 app.get('/api/data', (req: Request, res: Response) => {
-  const dataPath = path.resolve(__dirname, 'db.json');
+  const dataPath = path.resolve(__dirname, '../public/db.json');
   
   fs.readFile(dataPath, 'utf-8', (err, data) => {
     if (err) {
